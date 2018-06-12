@@ -24,5 +24,17 @@ namespace WpfView
         {
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+        }
+
+        private void btnCadastrar_Click(object sender, RoutedEventArgs e)
+        {
+            Cadastro cadastrar = new Cadastro();
+            cadastrar.Show();
+        }
     }
 }
