@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Modelos
 {
-    class Gastos
+   public class Gastos
     {
         public string Descricao { get; set; }
         public double Valor { get; set; }

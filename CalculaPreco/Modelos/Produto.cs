@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace Modelos
 {
-    class Produto
+   public class Produto
     {
-        public int CompraID { get; set; }
+        public int ProdutoID { get; set; }
         public string NomeProduto { get; set; }
         public int Quantidade { get; set; }
+        public double precoCompra { get; set; }
+        public double Lucro { get; set; }
 
     }
 }
