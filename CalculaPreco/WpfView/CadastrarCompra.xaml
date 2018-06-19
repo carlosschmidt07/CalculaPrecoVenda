@@ -1,0 +1,30 @@
+﻿<Window x:Class="WpfView.CadastrarCompra"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfView"
+        mc:Ignorable="d"
+        Title="CadastrarCompra" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"  />
+            <RowDefinition Height="1*"  />
+        </Grid.RowDefinitions>
+        <TextBox x:Name="nomeProdutoTxt" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="177,39,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="NomeProdutoLabel" Content="Nome do Produto:" Grid.Column="1" HorizontalAlignment="Left" Margin="39,36,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label x:Name="QuantidadeLabel" Content="Quantidade:" Grid.Column="1" HorizontalAlignment="Left" Margin="39,80,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label x:Name="ValorCOmpraLabel" Content="Valor da Compra:" Grid.Column="1" HorizontalAlignment="Left" Margin="39,128,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label x:Name="LucroLabel" Content="Lucro Desejado:" Grid.Column="1" HorizontalAlignment="Left" Margin="39,175,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <TextBox x:Name="qtdeTxt" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="177,84,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="valorCopraTxt" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="177,128,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="LucroTxt" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="177,187,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnGastos" Content="Proximo" Grid.Column="1" HorizontalAlignment="Left" Margin="334,232,0,0" Grid.Row="1" VerticalAlignment="Top" Width="76" Click="btnGastos_Click"/>
+    </Grid>
+</Window>

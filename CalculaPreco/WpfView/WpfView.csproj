@@ -61,6 +61,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="CadastrarCompra.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CadastrarGastos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Cadastro.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -77,6 +85,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="CadastrarCompra.xaml.cs">
+      <DependentUpon>CadastrarCompra.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CadastrarGastos.xaml.cs">
+      <DependentUpon>CadastrarGastos.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Cadastro.xaml.cs">
       <DependentUpon>Cadastro.xaml</DependentUpon>
     </Compile>
@@ -87,8 +101,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MostraGastos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MostraGastos.xaml.cs">
+      <DependentUpon>MostraGastos.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -114,6 +135,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Controlles\Controlles.csproj">
+      <Project>{2df4bf46-1f25-4668-a25a-5bc66045b33e}</Project>
+      <Name>Controlles</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modelos\Modelos.csproj">
+      <Project>{22f0352a-22be-4f4e-8749-9546a619affb}</Project>
+      <Name>Modelos</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

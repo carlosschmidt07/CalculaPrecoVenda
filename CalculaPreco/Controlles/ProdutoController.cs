@@ -1,4 +1,5 @@
 ﻿using Controllers.Base;
+using Controlles.DAL;
 using Modelos;
 using System;
 using System.Collections.Generic;
@@ -8,36 +9,43 @@ using System.Threading.Tasks;
 
 namespace Controlles
 {
-    class ProdutoController : IBaseController<Produto>
+   public class ProdutoController : IBaseController<Produto>
     {
+        Contexto contexto = new Contexto();
         public void Adicionar(Produto entity)
         {
-            throw new NotImplementedException();
+            contexto.Produtos.Add(entity);
+            contexto.SaveChanges();
         }
 
         public Produto BuscarPorID(int id)
         {
-            throw new NotImplementedException();
+           return contexto.Produtos.Find(id);
         }
 
         public void Editar(Produto entity)
         {
-            throw new NotImplementedException();
+            contexto.Entry(entity).State = System.Data.Entity.EntityState.Modified;
+            contexto.SaveChanges();
         }
 
         public void Excluir(int id)
         {
-            throw new NotImplementedException();
+            Produto prod = new Produto();
+            if (prod != null)
+            {
+                contexto.Produtos.Remove(prod);
+            }
         }
 
         public IList<Produto> ListarPorNome(string nome)
         {
-            throw new NotImplementedException();
+            return contexto.Produtos.Where(prod => prod.NomeProduto == nome).ToList();
         }
 
         public IList<Produto> ListarTodos()
         {
-            throw new NotImplementedException();
+            return contexto.Produtos.ToList();
         }
     }
 }

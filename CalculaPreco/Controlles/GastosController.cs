@@ -1,4 +1,5 @@
 ﻿using Controllers.Base;
+using Controlles.DAL;
 using Modelos;
 using System;
 using System.Collections.Generic;
@@ -6,18 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Controlles
+ namespace Controlles
 {
-    class GastosController : IBaseController<Gastos>
+   public class GastosController : IBaseController<Gastos>
     {
+        private Contexto contexto = new Contexto();
         public void Adicionar(Gastos entity)
         {
-            throw new NotImplementedException();
+            contexto.Gastos.Add(entity);
+            contexto.SaveChanges();
         }
 
         public Gastos BuscarPorID(int id)
         {
-            throw new NotImplementedException();
+            return contexto.Gastos.Find(id);
         }
 
         public void Editar(Gastos entity)
@@ -27,7 +30,11 @@ namespace Controlles
 
         public void Excluir(int id)
         {
-            throw new NotImplementedException();
+            Gastos gastos = new Gastos();
+            if (gastos != null)
+            {
+                contexto.Gastos.Remove(gastos);
+            }
         }
 
         public IList<Gastos> ListarPorNome(string nome)
@@ -37,7 +44,7 @@ namespace Controlles
 
         public IList<Gastos> ListarTodos()
         {
-            throw new NotImplementedException();
+            return contexto.Gastos.ToList();
         }
     }
 }

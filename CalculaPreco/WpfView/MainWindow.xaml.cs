@@ -36,5 +36,11 @@ namespace WpfView
             Cadastro cadastrar = new Cadastro();
             cadastrar.Show();
         }
+
+        private void btnCompra_Click(object sender, RoutedEventArgs e)
+        {
+            CadastrarCompra cadastrarCompra = new CadastrarCompra();
+            cadastrarCompra.Show();
+        }
     }
 }

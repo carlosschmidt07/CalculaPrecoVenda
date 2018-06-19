@@ -17,10 +17,9 @@
             <RowDefinition Height="5*"  />
             <RowDefinition Height="1*"  />
         </Grid.RowDefinitions>
-        <Button x:Name="btnCadastrar" Content="Cadastro" Grid.Column="1" HorizontalAlignment="Left" Margin="292,248,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="btnCadastrar_Click"/>
-        <Button x:Name="btnLogin" Content="Login" Grid.Column="1" HorizontalAlignment="Left" Margin="292,202,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="btnLogin_Click"/>
-        <TextBox x:Name="txtNome" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="122,33,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Nome:" Grid.Column="1" HorizontalAlignment="Left" Margin="59,33,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Button x:Name="btnCadastrar" Content="Cadastro" Grid.Column="1" HorizontalAlignment="Left" Margin="292,91,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="btnCadastrar_Click"/>
+        <Button x:Name="btnLogin" Content="Login" Grid.Column="1" HorizontalAlignment="Left" Margin="292,47,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="btnLogin_Click"/>
+        <Button x:Name="btnCompra" Content="Cadastrar Compra" Grid.Column="1" HorizontalAlignment="Left" Margin="292,131,0,0" Grid.Row="1" VerticalAlignment="Top" Width="125" Click="btnCompra_Click"/>
 
     </Grid>
 </Window>

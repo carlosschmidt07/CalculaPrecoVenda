@@ -8,7 +8,9 @@ namespace Modelos
 {
    public class Gastos
     {
+        public int GastosID { get; set; }
         public string Descricao { get; set; }
         public double Valor { get; set; }
+        public int ProdutoID { get; set; }
     }
 }

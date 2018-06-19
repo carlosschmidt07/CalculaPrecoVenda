@@ -9,7 +9,7 @@ using Controlles.DAL;
 
 namespace Controlles
 {
-    class UsuariosController : IBaseController<Usuario> 
+  public  class UsuariosController : IBaseController<Usuario> 
     {
         private Contexto contexto = new Contexto();
 
