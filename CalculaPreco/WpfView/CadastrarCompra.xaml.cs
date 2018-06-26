@@ -39,7 +39,7 @@ namespace WpfView
             p.Lucro = double.Parse(LucroTxt.Text);
             p.UsuarioID = _Usuario.UsuarioID;
             pc.Adicionar(p);
-            CadastrarGastos cadastrarGastos = new CadastrarGastos(p);
+            CadastrarGastos cadastrarGastos = new CadastrarGastos(p, _Usuario);
             
             cadastrarGastos.Show();
         }

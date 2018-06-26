@@ -22,10 +22,18 @@ namespace WpfView
     public partial class CadastrarGastos : Window
     {
         public Produto _Produto { get; set; }
+        public Usuario _Usuario { get; set; }
 
-        public CadastrarGastos(Produto p)
+        public CadastrarGastos(Produto p, Usuario u)
         {
             _Produto = p;
+            _Usuario = u;
+            InitializeComponent();
+        }
+
+        public CadastrarGastos()
+        {
+            
             InitializeComponent();
         }
 
@@ -45,7 +53,7 @@ namespace WpfView
 
         private void btnFinalizar_Click(object sender, RoutedEventArgs e)
         {
-            MostraGastos mostraGastos = new MostraGastos(_Produto);
+            MostraGastos mostraGastos = new MostraGastos(_Usuario);
             mostraGastos.Show();
         }
     }
