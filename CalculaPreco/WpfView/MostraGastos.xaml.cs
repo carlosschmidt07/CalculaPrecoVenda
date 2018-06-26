@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Controlles;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,19 @@ namespace WpfView
         public MostraGastos()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            CarregarDgGastos();
+        }
+
+        private void CarregarDgGastos()
+        {
+            GastosController gc = new GastosController();
+            ProdutoController pc = new ProdutoController();
+            dgGastos.ItemsSource = gc.ListarTodos();
+            //dgGastos.ItemsSource = pc.ListarTodos();
         }
     }
 }

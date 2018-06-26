@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Modelos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,8 +21,10 @@ namespace WpfView
     /// </summary>
     public partial class MainWindow : Window
     {
+       
         public MainWindow()
         {
+            
             InitializeComponent();
         }
 
@@ -37,10 +40,6 @@ namespace WpfView
             cadastrar.Show();
         }
 
-        private void btnCompra_Click(object sender, RoutedEventArgs e)
-        {
-            CadastrarCompra cadastrarCompra = new CadastrarCompra();
-            cadastrarCompra.Show();
-        }
+      
     }
 }

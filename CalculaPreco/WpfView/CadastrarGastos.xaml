@@ -20,8 +20,8 @@
         <Label x:Name="DescricaoLabel" Content="Descrição:" Grid.Column="1" HorizontalAlignment="Left" Margin="157,83,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <Label x:Name="ValorGastosLabel" Content="Valor:" Grid.Column="1" HorizontalAlignment="Left" Margin="157,175,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <TextBox x:Name="valorGastoTxt" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="234,179,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.475,-0.478"/>
-        <TextBlock x:Name="descricaoGastoTxt" Grid.Column="1" HorizontalAlignment="Left" Margin="234,88,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="67" Width="139"/>
         <Button x:Name="btnSalvaGastos" Content="Salvar Gasto" Grid.Column="1" HorizontalAlignment="Left" Margin="298,238,0,0" Grid.Row="1" VerticalAlignment="Top" Width="105" Click="btnSalvaGastos_Click"/>
         <Button x:Name="btnFinalizar" Grid.ColumnSpan="2" Content="Finalizar" Grid.Column="1" HorizontalAlignment="Left" Margin="409,271,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="btnFinalizar_Click"/>
+        <TextBox x:Name="descricaoGastoTxt" Grid.Column="1" HorizontalAlignment="Left" Height="65" Margin="234,87,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="148"/>
     </Grid>
 </Window>

@@ -1,11 +1,11 @@
-﻿<Window x:Class="WpfView.MainWindow"
+﻿<Window x:Class="WpfView.Gerenciar"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfView"
         mc:Ignorable="d"
-        Title="YUYUYU" Height="450" Width="800" Background="#FFC57736">
+        Title="Gerenciar" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
@@ -17,9 +17,7 @@
             <RowDefinition Height="5*"  />
             <RowDefinition Height="1*"  />
         </Grid.RowDefinitions>
-        <Button x:Name="btnCadastrar" Content="Cadastro" Grid.Column="1" HorizontalAlignment="Left" Margin="292,91,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="btnCadastrar_Click"/>
-        <Button x:Name="btnLogin" Content="Login" Grid.Column="1" HorizontalAlignment="Left" Margin="292,47,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="btnLogin_Click"/>
-
+        <Button x:Name="btnCadastrarCompra" Content="Cadastrar Compra" Grid.Column="1" HorizontalAlignment="Left" Margin="278,129,0,0" Grid.Row="1" VerticalAlignment="Top" Width="132" Click="btnCadastrarCompra_Click" Height="35"/>
+        <Button x:Name="btnMostrarGastos" Content="Button" Grid.Column="1" HorizontalAlignment="Left" Margin="278,177,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="btnMostrarGastos_Click"/>
     </Grid>
 </Window>
-

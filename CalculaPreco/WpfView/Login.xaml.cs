@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Controlles;
+using Modelos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +24,24 @@ namespace WpfView
         public Login()
         {
             InitializeComponent();
+        }
+
+        private void btnLogar_Click(object sender, RoutedEventArgs e)
+        {
+            UsuariosController uc = new UsuariosController();
+            Usuario usuario = new Usuario();
+            usuario = uc.LoginUsuario(txtEmail.Text ,txtSenha.Text);
+            if (usuario != null)
+            {
+                Gerenciar gerenciar = new Gerenciar(usuario);
+
+                gerenciar.Show();
+            }
+            else
+            {
+                MessageBox.Show("Deu Ruim");
+            }
+           
         }
     }
 }

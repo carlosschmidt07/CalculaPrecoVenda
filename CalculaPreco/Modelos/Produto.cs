@@ -19,5 +19,7 @@ namespace Modelos
        
         public double Lucro { get; set; }
 
+        public int UsuarioID { get; set; }
+
     }
 }

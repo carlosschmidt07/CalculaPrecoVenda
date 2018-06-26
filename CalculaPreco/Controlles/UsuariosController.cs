@@ -23,7 +23,32 @@ namespace Controlles
         {
             return contexto.Usuarios.Find(id);
         }
-
+        public Usuario LoginUsuario(string email, string senha)
+        {
+            Usuario user = new Usuario();
+            user = BuscaEmail(email);
+           
+            if (user.Senha == senha)
+            {
+                return user;
+            }
+            else
+                return null;
+            
+        }
+        public Usuario BuscaEmail(string email)
+        {
+            try
+            {
+                return contexto.Usuarios.Find(email);
+            }
+            catch (Exception )
+            {
+                throw new Exception("Email não encontrado!");
+                
+            }
+           
+        }
         public void Editar(Usuario entity)
         {
             contexto.Entry(entity).State = System.Data.Entity.EntityState.Modified;

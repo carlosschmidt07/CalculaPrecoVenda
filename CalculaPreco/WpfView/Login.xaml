@@ -12,10 +12,10 @@
             <ColumnDefinition Width="3*" />
             <ColumnDefinition Width="2*" />
         </Grid.ColumnDefinitions>
-        <Button Content="Button" Grid.Column="1" HorizontalAlignment="Left" Margin="224,178,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnLogar" Content="Button" Grid.Column="1" HorizontalAlignment="Left" Margin="224,178,0,0" VerticalAlignment="Top" Width="75" Click="btnLogar_Click"/>
         <Label Content="Email:" Grid.Column="1" HorizontalAlignment="Left" Margin="73,77,0,0" VerticalAlignment="Top"/>
         <Label Content="Senha" Grid.Column="1" HorizontalAlignment="Left" Margin="73,122,0,0" VerticalAlignment="Top"/>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="132,77,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="132,126,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtEmail" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="132,77,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtSenha" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="132,126,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Window>

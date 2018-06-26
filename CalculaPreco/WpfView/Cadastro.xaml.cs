@@ -38,7 +38,9 @@ namespace WpfView
                 usuario.Email = txtEmail.Text;
                 usuario.Senha = txtSenha.Text;
                 uc.Adicionar(usuario);
-                MessageBox.Show("Deu Boa");
+                Gerenciar gerenciar = new Gerenciar(usuario);
+
+                gerenciar.Show();
             }
             catch (Exception ex)
             {

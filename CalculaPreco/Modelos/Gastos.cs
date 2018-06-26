@@ -12,5 +12,6 @@ namespace Modelos
         public string Descricao { get; set; }
         public double Valor { get; set; }
         public int ProdutoID { get; set; }
+        public int UsuarioID { get; set; }
     }
 }

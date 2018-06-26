@@ -12,9 +12,9 @@ namespace Controlles.DAL
     {
         public Contexto() : base("strConn")
         {
-            Database.SetInitializer(new DropCreateDatabaseAlways<Contexto>());
+            //Database.SetInitializer(new DropCreateDatabaseAlways<Contexto>());
 
-           // Database.SetInitializer(new DropCreateDatabaseIfModelChanges<Contexto>());
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<Contexto>());
 
 
 
