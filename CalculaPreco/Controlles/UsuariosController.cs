@@ -25,29 +25,25 @@ namespace Controlles
         }
         public Usuario LoginUsuario(string email, string senha)
         {
-            Usuario user = new Usuario();
-            user = BuscaEmail(email);
-           
-            if (user.Senha == senha)
+            IEnumerable<Usuario> user = BuscaEmail(email);
+            
+            foreach (var usuario in user)
             {
-                return user;
+                if (usuario.Senha == senha)
+                {
+                    return usuario;
+                }
+               
             }
-            else
-                return null;
+
+            return null;
+            
             
         }
-        public Usuario BuscaEmail(string email)
+        public IEnumerable<Usuario> BuscaEmail(string email)
         {
-            try
-            {
-                return contexto.Usuarios.Find(email);
-            }
-            catch (Exception )
-            {
-                throw new Exception("Email não encontrado!");
-                
-            }
-           
+            return contexto.Usuarios.Where(usu => usu.Email == email);
+
         }
         public void Editar(Usuario entity)
         {

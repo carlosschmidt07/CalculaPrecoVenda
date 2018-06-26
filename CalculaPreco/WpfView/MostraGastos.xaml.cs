@@ -1,4 +1,5 @@
 ﻿using Controlles;
+using Modelos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,8 +21,12 @@ namespace WpfView
     /// </summary>
     public partial class MostraGastos : Window
     {
-        public MostraGastos()
+         public Usuario _Usuario { get; set; }
+       
+        
+        public MostraGastos(Usuario u)
         {
+            _Usuario = u; ;
             InitializeComponent();
         }
 
@@ -34,7 +39,9 @@ namespace WpfView
         {
             GastosController gc = new GastosController();
             ProdutoController pc = new ProdutoController();
-            dgGastos.ItemsSource = gc.ListarTodos();
+            dgGastos.ItemsSource = gc.ListarPorUsuario(_Usuario.UsuarioID);
+            dgCompra.ItemsSource = pc.ListarPorUsuario(_Usuario.UsuarioID);
+            
             //dgGastos.ItemsSource = pc.ListarTodos();
         }
     }

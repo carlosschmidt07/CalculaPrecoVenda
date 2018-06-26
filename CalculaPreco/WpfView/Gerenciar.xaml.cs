@@ -1,4 +1,5 @@
-﻿using Modelos;
+﻿using Controlles;
+using Modelos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,13 +30,15 @@ namespace WpfView
 
         private void btnCadastrarCompra_Click(object sender, RoutedEventArgs e)
         {
-            CadastrarCompra cadastrarCompra = new CadastrarCompra();
+            CadastrarCompra cadastrarCompra = new CadastrarCompra(_Usuario);
             cadastrarCompra.Show();
         }
 
         private void btnMostrarGastos_Click(object sender, RoutedEventArgs e)
         {
-            MostraGastos mostraGastos = new MostraGastos();
+            ProdutoController pc = new ProdutoController();
+            pc.BuscarPorID(_Usuario.UsuarioID);
+            MostraGastos mostraGastos = new MostraGastos(_Usuario);
             mostraGastos.Show();
         }
     }

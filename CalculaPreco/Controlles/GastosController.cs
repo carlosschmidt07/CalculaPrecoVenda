@@ -22,7 +22,7 @@ using System.Threading.Tasks;
         {
             return contexto.Gastos.Find(id);
         }
-
+        
         public void Editar(Gastos entity)
         {
             throw new NotImplementedException();
@@ -45,6 +45,10 @@ using System.Threading.Tasks;
         public IList<Gastos> ListarTodos()
         {
             return contexto.Gastos.ToList();
+        }
+        public IList<Gastos> ListarPorUsuario(int id)
+        {
+            return contexto.Gastos.Where(gas => gas.UsuarioID == id).ToList();
         }
     }
 }

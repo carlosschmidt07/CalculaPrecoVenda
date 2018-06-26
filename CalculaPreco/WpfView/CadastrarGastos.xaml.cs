@@ -36,6 +36,7 @@ namespace WpfView
             g.Descricao = descricaoGastoTxt.Text;
             g.Valor = double.Parse(valorGastoTxt.Text);
             g.ProdutoID = _Produto.ProdutoID;
+            g.UsuarioID = _Produto.UsuarioID;
             gc.Adicionar(g);
             descricaoGastoTxt.Text = null;
             valorGastoTxt.Text = null;
@@ -44,7 +45,7 @@ namespace WpfView
 
         private void btnFinalizar_Click(object sender, RoutedEventArgs e)
         {
-            MostraGastos mostraGastos = new MostraGastos();
+            MostraGastos mostraGastos = new MostraGastos(_Produto);
             mostraGastos.Show();
         }
     }

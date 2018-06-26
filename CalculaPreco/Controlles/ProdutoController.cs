@@ -22,7 +22,7 @@ namespace Controlles
         {
            return contexto.Produtos.Find(id);
         }
-
+       
         public void Editar(Produto entity)
         {
             contexto.Entry(entity).State = System.Data.Entity.EntityState.Modified;
@@ -46,6 +46,10 @@ namespace Controlles
         public IList<Produto> ListarTodos()
         {
             return contexto.Produtos.ToList();
+        }
+        public IList<Produto> ListarPorUsuario(int id)
+        {
+            return contexto.Produtos.Where(prod => prod.UsuarioID == id).ToList();
         }
     }
 }

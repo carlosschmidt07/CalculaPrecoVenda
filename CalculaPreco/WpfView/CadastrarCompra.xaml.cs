@@ -21,8 +21,10 @@ namespace WpfView
     /// </summary>
     public partial class CadastrarCompra : Window
     {
-        public CadastrarCompra()
+        public Usuario _Usuario { get; set; }
+        public CadastrarCompra(Usuario u)
         {
+            _Usuario = u;
             InitializeComponent();
         }
 
@@ -35,6 +37,7 @@ namespace WpfView
             p.Quantidade = int.Parse(qtdeTxt.Text);
             p.precoCompra = double.Parse(valorCopraTxt.Text);
             p.Lucro = double.Parse(LucroTxt.Text);
+            p.UsuarioID = _Usuario.UsuarioID;
             pc.Adicionar(p);
             CadastrarGastos cadastrarGastos = new CadastrarGastos(p);
             
