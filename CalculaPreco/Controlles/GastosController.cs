@@ -50,5 +50,25 @@ using System.Threading.Tasks;
         {
             return contexto.Gastos.Where(gas => gas.UsuarioID == id).ToList();
         }
+        public IEnumerable<Gastos> BuscaGastosCompra(int id)
+        {
+            return contexto.Gastos.Where(gas => gas.ProdutoID == id);
+
+        }
+        public double SomaGastos(int id)
+        {
+            IEnumerable<Gastos> valorGastos = BuscaGastosCompra(id);
+            double somaValor=0;
+            foreach (var valor in valorGastos )
+            {
+
+                somaValor = somaValor + valor.Valor;
+
+            }
+
+            return somaValor;
+
+
+        }
     }
 }

@@ -23,6 +23,7 @@ namespace WpfView
     {
         public Produto _Produto { get; set; }
         public Usuario _Usuario { get; set; }
+        public double Soma { get; set; }
 
         public CadastrarGastos(Produto p, Usuario u)
         {
@@ -53,8 +54,21 @@ namespace WpfView
 
         private void btnFinalizar_Click(object sender, RoutedEventArgs e)
         {
-            MostraGastos mostraGastos = new MostraGastos(_Usuario);
-            mostraGastos.Show();
+            //if (valorGastoTxt !=null && descricaoGastoTxt !=null)
+            //{
+            //    Gastos g = new Gastos();
+            //    GastosController gc = new GastosController();
+            //    g.Descricao = descricaoGastoTxt.Text;
+            //    g.Valor = double.Parse(valorGastoTxt.Text);
+            //    g.ProdutoID = _Produto.ProdutoID;
+            //    g.UsuarioID = _Produto.UsuarioID;
+            //    gc.Adicionar(g);
+
+            //}
+            GastosController gc = new GastosController();
+            Soma =  gc.SomaGastos(_Produto.ProdutoID);
+            MostraGastos mostraGastos = new MostraGastos(_Usuario, Soma);
+            mostraGastos.Show();  
         }
     }
 }
