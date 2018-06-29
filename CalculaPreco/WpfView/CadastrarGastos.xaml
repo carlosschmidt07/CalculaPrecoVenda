@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfView"
         mc:Ignorable="d"
-        Title="CadastrarGastos" Height="450" Width="800">
+        Title="CadastrarGastos"  Height="450" Width="400.5" Background="#FF5500">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*" />
@@ -17,11 +17,11 @@
             <RowDefinition Height="5*"  />
             <RowDefinition Height="1*"  />
         </Grid.RowDefinitions>
-        <Label x:Name="DescricaoLabel" Content="Descrição:" Grid.Column="1" HorizontalAlignment="Left" Margin="157,83,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Label x:Name="ValorGastosLabel" Content="Valor:" Grid.Column="1" HorizontalAlignment="Left" Margin="157,175,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <TextBox x:Name="valorGastoTxt" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="234,179,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.475,-0.478"/>
-        <Button x:Name="btnSalvaGastos" Content="Salvar Gasto" Grid.Column="1" HorizontalAlignment="Left" Margin="298,238,0,0" Grid.Row="1" VerticalAlignment="Top" Width="105" Click="btnSalvaGastos_Click"/>
-        <Button x:Name="btnFinalizar" Grid.ColumnSpan="2" Content="Finalizar" Grid.Column="1" HorizontalAlignment="Left" Margin="409,271,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="btnFinalizar_Click"/>
-        <TextBox x:Name="descricaoGastoTxt" Grid.Column="1" HorizontalAlignment="Left" Height="65" Margin="234,87,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="148"/>
+        <Label x:Name="DescricaoLabel" Content="Descrição:" HorizontalAlignment="Left" Margin="38,6,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <Label x:Name="ValorGastosLabel" Content="Valor:" HorizontalAlignment="Left" Margin="38,100,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <TextBox x:Name="valorGastoTxt" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="43,103,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.475,-0.478"/>
+        <Button x:Name="btnSalvaGastos" Content="Salvar Gasto" Grid.Column="1" HorizontalAlignment="Left" Margin="34,153,0,0" Grid.Row="1" VerticalAlignment="Top" Width="98" Click="btnSalvaGastos_Click" Height="31"/>
+        <Button x:Name="btnFinalizar" Content="Finalizar" Grid.Column="1" HorizontalAlignment="Left" Margin="116,226,0,0" Grid.Row="1" VerticalAlignment="Top" Width="119" Click="btnFinalizar_Click" Height="73"/>
+        <TextBox x:Name="descricaoGastoTxt" Grid.Column="1" HorizontalAlignment="Left" Height="65" Margin="43,10,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="148"/>
     </Grid>
 </Window>

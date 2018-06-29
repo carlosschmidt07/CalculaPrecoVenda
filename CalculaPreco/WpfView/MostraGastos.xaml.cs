@@ -44,6 +44,7 @@ namespace WpfView
             dgGastos.ItemsSource = gc.ListarPorUsuario(_Usuario.UsuarioID);
             dgCompra.ItemsSource = pc.ListarPorUsuario(_Usuario.UsuarioID);
            
+           
 
             //dgGastos.ItemsSource = pc.ListarTodos();
         }
@@ -52,6 +53,11 @@ namespace WpfView
 
         private void dgCompra_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
+           
+        }
+
+        private void btnCalcular_Click(object sender, RoutedEventArgs e)
+        {
             ProdutoController pc = new ProdutoController();
             IList<Produto> p = pc.ListarPorUsuario(_Usuario.UsuarioID);
             double precoFinal = 0;
@@ -59,13 +65,13 @@ namespace WpfView
             {
                 if (produto.UsuarioID == _Usuario.UsuarioID)
                 {
-                    precoFinal = ((produto.precoCompra + somaGastos) / produto.Quantidade)* produto.Lucro;
+                    precoFinal = ((produto.precoCompra + somaGastos) / produto.Quantidade) * (produto.Lucro/100);
+                    
+                    
                     MessageBox.Show("Preço de Venda é: (" + precoFinal + ")");
-                } 
+                }
             }
         }
-
-
-
+       
     }
 }

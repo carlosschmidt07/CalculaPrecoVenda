@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfView"
         mc:Ignorable="d"
-        Title="Gerenciar" Height="450" Width="800">
+        Title="Gerenciar"  Height="450" Width="264.5" Background="#FF5500">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
@@ -17,7 +17,7 @@
             <RowDefinition Height="5*"  />
             <RowDefinition Height="1*"  />
         </Grid.RowDefinitions>
-        <Button x:Name="btnCadastrarCompra" Content="Cadastrar Compra" Grid.Column="1" HorizontalAlignment="Left" Margin="278,129,0,0" Grid.Row="1" VerticalAlignment="Top" Width="132" Click="btnCadastrarCompra_Click" Height="35"/>
-        <Button x:Name="btnMostrarGastos" Content="Button" Grid.Column="1" HorizontalAlignment="Left" Margin="278,177,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="btnMostrarGastos_Click"/>
+        <Button x:Name="btnCadastrarCompra" Content="Cadastrar Compra" Grid.Column="1" HorizontalAlignment="Left" Margin="37,36,0,0" Grid.Row="1" VerticalAlignment="Top" Width="122" Click="btnCadastrarCompra_Click" Height="87"/>
+        <Button x:Name="btnMostrarGastos" Content="Mostrar Compras" Grid.Column="1" HorizontalAlignment="Left" Margin="37,135,0,0" Grid.Row="1" VerticalAlignment="Top" Width="122" Click="btnMostrarGastos_Click" Height="87"/>
     </Grid>
 </Window>

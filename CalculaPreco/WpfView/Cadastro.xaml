@@ -5,19 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfView"
         mc:Ignorable="d"
-        Title="Cadastro" Height="450" Width="800">
+        Title="Cadastro" Height="450" Width="300.5" Background="#FF5500">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="3*" />
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
-        <Label Content="Nome:" Grid.Column="1" HorizontalAlignment="Left" Margin="125,61,0,0" VerticalAlignment="Top"/>
-        <Label Content="Email:" Grid.Column="1" HorizontalAlignment="Left" Margin="129,104,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.049,-1.769"/>
-        <Label Content="Senha:" Grid.Column="1" HorizontalAlignment="Left" Margin="125,145,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.553,-0.077"/>
-        <TextBox x:Name="txtNome" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="176,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtEmail" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="176,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtSenha" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="176,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnSalvar" Content="Cadastrar" Grid.Column="1" HorizontalAlignment="Left" Margin="239,201,0,0" VerticalAlignment="Top" Width="75" Click="btnSalvar_Click"/>
+        <Label Content="Nome:" HorizontalAlignment="Left" Margin="0,44,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label Content="Email:" HorizontalAlignment="Left" Margin="0,89,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.049,-1.769" Grid.Column="1"/>
+        <Label Content="Senha:" HorizontalAlignment="Left" Margin="0,128,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.553,-0.077" Grid.Column="1"/>
+        <TextBox x:Name="txtNome" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="50,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtEmail" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="50,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtSenha" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="50,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnSalvar" Content="Cadastrar" Grid.Column="1" HorizontalAlignment="Left" Margin="78,181,0,0" VerticalAlignment="Top" Width="97" Click="btnSalvar_Click" Height="68"/>
     </Grid>
 </Window>

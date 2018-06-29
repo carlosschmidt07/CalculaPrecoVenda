@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfView"
         mc:Ignorable="d"
-        Title="YUYUYU" Height="450" Width="800" Background="#FFC57736">
-    <Grid>
+        Title="YUYUYU" Height="450" Width="264.5" Background="#FF5500">
+    <Grid Margin="0,0,2,12">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="5*"/>
@@ -17,8 +17,8 @@
             <RowDefinition Height="5*"  />
             <RowDefinition Height="1*"  />
         </Grid.RowDefinitions>
-        <Button x:Name="btnCadastrar" Content="Cadastro" Grid.Column="1" HorizontalAlignment="Left" Margin="292,91,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="btnCadastrar_Click"/>
-        <Button x:Name="btnLogin" Content="Login" Grid.Column="1" HorizontalAlignment="Left" Margin="292,47,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="btnLogin_Click"/>
+        <Button x:Name="btnCadastrar" Content="Cadastro" Grid.Column="1" HorizontalAlignment="Left" Margin="46,131,0,0" Grid.Row="1" VerticalAlignment="Top" Width="92" Click="btnCadastrar_Click" Height="77"/>
+        <Button x:Name="btnLogin" Content="Login" Grid.Column="1" HorizontalAlignment="Left" Margin="46,49,0,0" Grid.Row="1" VerticalAlignment="Top" Width="92" Click="btnLogin_Click" Height="77"/>
 
     </Grid>
 </Window>

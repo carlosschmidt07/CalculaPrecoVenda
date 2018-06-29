@@ -5,17 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfView"
         mc:Ignorable="d"
-        Title="Login" Height="450" Width="800">
-    <Grid>
+        Title="Login"  Height="450" Width="264.5" Background="#FF5500">
+    <Grid Margin="0,0,2,12">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*" />
-            <ColumnDefinition Width="3*" />
-            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="btnLogar" Content="Button" Grid.Column="1" HorizontalAlignment="Left" Margin="224,178,0,0" VerticalAlignment="Top" Width="75" Click="btnLogar_Click"/>
-        <Label Content="Email:" Grid.Column="1" HorizontalAlignment="Left" Margin="73,77,0,0" VerticalAlignment="Top"/>
-        <Label Content="Senha" Grid.Column="1" HorizontalAlignment="Left" Margin="73,122,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtEmail" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="132,77,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtSenha" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="132,126,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"  />
+            <RowDefinition Height="1*"  />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="btnLogar" Content="Entrar" Grid.Column="1" HorizontalAlignment="Left" Margin="46,205,0,0" Grid.Row="1" VerticalAlignment="Top" Width="92" Click="btnLogar_Click" Height="76"/>
+        <Label Content="Email:" Grid.Column="1" HorizontalAlignment="Left" Margin="20,77,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Content="Senha:" Grid.Column="1" HorizontalAlignment="Left" Margin="20,108,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtEmail" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="75,80,0,0" Grid.Row="1" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtSenha" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="75,108,0,0" Grid.Row="1" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+
     </Grid>
+
 </Window>
+        

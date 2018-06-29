@@ -37,8 +37,12 @@ namespace WpfView
         private void btnMostrarGastos_Click(object sender, RoutedEventArgs e)
         {
             ProdutoController pc = new ProdutoController();
-            pc.BuscarPorID(_Usuario.UsuarioID);
-            MostraGastos mostraGastos = new MostraGastos(_Usuario);
+            GastosController gc = new GastosController();
+           
+            Produto p = pc.BuscarPorID(_Usuario.UsuarioID);
+           double soma = gc.SomaGastos(p.ProdutoID);
+
+            MostraGastos mostraGastos = new MostraGastos(_Usuario, soma);
             mostraGastos.Show();
         }
     }

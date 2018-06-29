@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfView"
         mc:Ignorable="d"
-        Title="CadastrarCompra" Height="450" Width="800">
+        Title="CadastrarCompra" Height="450" Width="500" Background="#FF5500">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*" />
@@ -17,14 +17,23 @@
             <RowDefinition Height="5*"  />
             <RowDefinition Height="1*"  />
         </Grid.RowDefinitions>
-        <TextBox x:Name="nomeProdutoTxt" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="177,39,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="NomeProdutoLabel" Content="Nome do Produto:" Grid.Column="1" HorizontalAlignment="Left" Margin="39,36,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Label x:Name="QuantidadeLabel" Content="Quantidade:" Grid.Column="1" HorizontalAlignment="Left" Margin="39,80,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Label x:Name="ValorCOmpraLabel" Content="Valor da Compra:" Grid.Column="1" HorizontalAlignment="Left" Margin="39,128,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Label x:Name="LucroLabel" Content="Lucro Desejado:" Grid.Column="1" HorizontalAlignment="Left" Margin="39,175,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <TextBox x:Name="qtdeTxt" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="177,84,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="valorCopraTxt" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="177,128,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="LucroTxt" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="177,187,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnGastos" Content="Proximo" Grid.Column="1" HorizontalAlignment="Left" Margin="334,232,0,0" Grid.Row="1" VerticalAlignment="Top" Width="76" Click="btnGastos_Click"/>
+        <TextBox x:Name="nomeProdutoTxt" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="104,24,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="NomeProdutoLabel" Content="Nome do Produto:" HorizontalAlignment="Left" Margin="73,21,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <Label x:Name="QuantidadeLabel" Content="Quantidade:" HorizontalAlignment="Left" Margin="73,74,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <Label x:Name="ValorCOmpraLabel" Content="Valor da Compra:" HorizontalAlignment="Left" Margin="73,118,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <Label x:Name="LucroLabel" Content="Porcentagem de &#xD;&#xA;Lucro Desejado: &#xD;&#xA;(apenas o numero)" HorizontalAlignment="Left" Margin="80,153,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="76" Grid.ColumnSpan="2">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="2.045"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0.464"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <TextBox x:Name="qtdeTxt" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="104,69,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="valorCopraTxt" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="104,113,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="LucroTxt" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="104,171,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnGastos" Content="Proximo" Grid.Column="1" HorizontalAlignment="Left" Margin="168,232,0,0" Grid.Row="1" VerticalAlignment="Top" Width="117" Click="btnGastos_Click" Height="67"/>
     </Grid>
 </Window>
