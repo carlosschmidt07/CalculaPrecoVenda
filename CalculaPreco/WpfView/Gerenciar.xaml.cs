@@ -39,10 +39,10 @@ namespace WpfView
             ProdutoController pc = new ProdutoController();
             GastosController gc = new GastosController();
            
-            Produto p = pc.BuscarPorID(_Usuario.UsuarioID);
-           double soma = gc.SomaGastos(p.ProdutoID);
+            //Produto p = pc.ListarPorUsuario(_Usuario.UsuarioID).First();
+            //double soma = gc.SomaGastos(p.ProdutoID);
 
-            MostraGastos mostraGastos = new MostraGastos(_Usuario, soma);
+            MostraGastos mostraGastos = new MostraGastos(_Usuario);
             mostraGastos.Show();
         }
     }

@@ -66,8 +66,8 @@ namespace WpfView
 
             //}
             GastosController gc = new GastosController();
-            Soma =  gc.SomaGastos(_Produto.ProdutoID);
-            MostraGastos mostraGastos = new MostraGastos(_Usuario, Soma);
+           // Soma =  gc.SomaGastos(_Produto.ProdutoID);
+            MostraGastos mostraGastos = new MostraGastos(_Usuario);
             mostraGastos.Show();  
         }
     }

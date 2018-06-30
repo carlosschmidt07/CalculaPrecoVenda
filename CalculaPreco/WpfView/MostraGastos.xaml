@@ -17,9 +17,33 @@
             <RowDefinition Height="5*"  />
             <RowDefinition Height="1*"  />
         </Grid.RowDefinitions>
-        <DataGrid x:Name="dgGastos" HorizontalAlignment="Left" Height="260" Margin="96,248,0,0" VerticalAlignment="Top" Width="542" Grid.Row="1" Grid.ColumnSpan="2"/>
-        <DataGrid x:Name="dgCompra" HorizontalAlignment="Left" Height="247" Margin="96,78,0,0" VerticalAlignment="Top" Width="778" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
-        <Button x:Name="btnCalcular" Content="Calcular Preço" Grid.Column="1" HorizontalAlignment="Left" Margin="533,320,0,0" Grid.Row="1" VerticalAlignment="Top" Width="165" Click="btnCalcular_Click" Height="80"/>
+        <DataGrid x:Name="dgGastos" HorizontalAlignment="Left" Height="260" Margin="96,248,0,0" VerticalAlignment="Top" Width="542" Grid.Row="1" Grid.ColumnSpan="2" />
+        <DataGrid x:Name="dgCompra" HorizontalAlignment="Left" Height="247" Margin="96,78,0,0" VerticalAlignment="Top" Width="778" Grid.ColumnSpan="3" Grid.RowSpan="2" AutoGenerateColumns="False">
+            
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id"   Binding="{Binding Path=ProdutoID}" />
+                <DataGridTextColumn Header="Nome"   Binding="{Binding Path=NomeProduto}" />
+                <DataGridTextColumn Header="Quantidade"   Binding="{Binding Path=Quantidade}" />
+                <DataGridTextColumn Header="Preço da Compra"   Binding="{Binding Path=precoCompra}" />
+                <DataGridTextColumn Header="Lucro Desejado"   Binding="{Binding Path=Lucro}" />
+                <DataGridTextColumn Header="Id do Usuario"   Binding="{Binding Path=UsuarioID}" />
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Click="CalculaPreco">Calcular</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Click="btnExcluir">Excluir</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
 
-    </Grid>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btnCalcular" Content="Calcular Preço" Grid.Column="1" HorizontalAlignment="Left" Margin="533,320,0,0" Grid.Row="1" VerticalAlignment="Top" Width="165" Click="btnCalcular_Click" Height="80" />   </Grid>
+    
 </Window>

@@ -31,7 +31,7 @@ namespace Controlles
 
         public void Excluir(int id)
         {
-            Produto prod = new Produto();
+            Produto prod = BuscarPorID(id);
             if (prod != null)
             {
                 contexto.Produtos.Remove(prod);
@@ -51,5 +51,6 @@ namespace Controlles
         {
             return contexto.Produtos.Where(prod => prod.UsuarioID == id).ToList();
         }
+        
     }
 }
