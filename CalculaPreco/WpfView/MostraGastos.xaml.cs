@@ -63,6 +63,7 @@ namespace WpfView
             
             ProdutoController pc = new ProdutoController();
             pc.Excluir(idCompra);
+            
         }
 
         private void CalculaPrecoVenda(int id)

@@ -35,6 +35,7 @@ namespace Controlles
             if (prod != null)
             {
                 contexto.Produtos.Remove(prod);
+                contexto.SaveChanges();
             }
         }
 
