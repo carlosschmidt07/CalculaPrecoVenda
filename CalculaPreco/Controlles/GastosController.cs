@@ -70,5 +70,16 @@ using System.Threading.Tasks;
 
 
         }
+        public void ExcluiGastosCompra(int id)
+        {
+            IEnumerable<Gastos> gastos = BuscaGastosCompra(id);
+
+            foreach (var gasto in gastos)
+            {
+                contexto.Gastos.Remove(gasto);
+               
+            }
+            contexto.SaveChanges();
+        }
     }
 }

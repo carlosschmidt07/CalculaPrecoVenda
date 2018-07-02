@@ -22,7 +22,7 @@ namespace WpfView
     public partial class MostraGastos : Window
     {
          public Usuario _Usuario { get; set; }
-        public double somaGastos { get; set; }
+       
 
 
         public MostraGastos(Usuario u)
@@ -43,6 +43,7 @@ namespace WpfView
             ProdutoController pc = new ProdutoController();
             dgGastos.ItemsSource = gc.ListarPorUsuario(_Usuario.UsuarioID);
             dgCompra.ItemsSource = pc.ListarPorUsuario(_Usuario.UsuarioID);
+            
            
            
 
@@ -62,7 +63,11 @@ namespace WpfView
             int idCompra = ((Produto)dgCompra.SelectedItem).ProdutoID;
             
             ProdutoController pc = new ProdutoController();
+            GastosController gc = new GastosController();
             pc.Excluir(idCompra);
+            gc.ExcluiGastosCompra(idCompra);
+            CarregarDgGastos();
+
             
         }
 
@@ -79,19 +84,11 @@ namespace WpfView
 
             double soma = gc.SomaGastos(produto.ProdutoID);
                   lucro = produto.Lucro / 100;
-                  precoFinal = ((produto.precoCompra + somaGastos) / produto.Quantidade) + lucro;
+                  precoFinal = ((produto.precoCompra + soma) / produto.Quantidade) + lucro;
                   MessageBox.Show("Preço de Venda é: (" + precoFinal + ")");
             
         }
 
-        private void btnCalcular_Click(object sender, RoutedEventArgs e)
-        {
-           
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+       
     }
 }

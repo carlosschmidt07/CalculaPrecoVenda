@@ -30,18 +30,29 @@ namespace WpfView
 
         private void btnGastos_Click(object sender, RoutedEventArgs e)
         {
-            //salvar compra
-            Produto p = new Produto();
-            ProdutoController pc = new ProdutoController();
-            p.NomeProduto = nomeProdutoTxt.Text;
-            p.Quantidade = int.Parse(qtdeTxt.Text);
-            p.precoCompra = double.Parse(valorCopraTxt.Text);
-            p.Lucro = double.Parse(LucroTxt.Text);
-            p.UsuarioID = _Usuario.UsuarioID;
-            pc.Adicionar(p);
-            CadastrarGastos cadastrarGastos = new CadastrarGastos(p, _Usuario);
             
-            cadastrarGastos.Show();
+            
+            try
+            {
+                Produto p = new Produto();
+                ProdutoController pc = new ProdutoController();
+
+                p.NomeProduto = nomeProdutoTxt.Text;
+                p.Quantidade = int.Parse(qtdeTxt.Text);
+                p.precoCompra = double.Parse(valorCopraTxt.Text);
+                p.Lucro = double.Parse(LucroTxt.Text);
+                p.UsuarioID = _Usuario.UsuarioID;
+                pc.Adicionar(p);
+                CadastrarGastos cadastrarGastos = new CadastrarGastos(p, _Usuario);
+
+                cadastrarGastos.Show();
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Erro Campos vazios ou com erros");
+            }
+           
         }
     }
 }

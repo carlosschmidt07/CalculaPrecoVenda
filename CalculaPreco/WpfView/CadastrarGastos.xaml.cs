@@ -40,21 +40,30 @@ namespace WpfView
 
         private void btnSalvaGastos_Click(object sender, RoutedEventArgs e)
         {
-            Gastos g = new Gastos();
-            GastosController gc = new GastosController();
-            g.Descricao = descricaoGastoTxt.Text;
-            g.Valor = double.Parse(valorGastoTxt.Text);
-            g.ProdutoID = _Produto.ProdutoID;
-            g.UsuarioID = _Produto.UsuarioID;
-            gc.Adicionar(g);
-            descricaoGastoTxt.Text = null;
-            valorGastoTxt.Text = null;
+            try
+            {
+                Gastos g = new Gastos();
+                GastosController gc = new GastosController();
+                g.Descricao = descricaoGastoTxt.Text;
+                g.Valor = double.Parse(valorGastoTxt.Text);
+                g.ProdutoID = _Produto.ProdutoID;
+                g.UsuarioID = _Produto.UsuarioID;
+                gc.Adicionar(g);
+                descricaoGastoTxt.Text = null;
+                valorGastoTxt.Text = null;
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Erro Fampos vazios ou com erros");
+            }
+            
 
         }
 
         private void btnFinalizar_Click(object sender, RoutedEventArgs e)
         {
-            //if (valorGastoTxt !=null && descricaoGastoTxt !=null)
+            //if (valorGastoTxt != null && descricaoGastoTxt != null)
             //{
             //    Gastos g = new Gastos();
             //    GastosController gc = new GastosController();
@@ -65,8 +74,8 @@ namespace WpfView
             //    gc.Adicionar(g);
 
             //}
-            GastosController gc = new GastosController();
-           // Soma =  gc.SomaGastos(_Produto.ProdutoID);
+
+
             MostraGastos mostraGastos = new MostraGastos(_Usuario);
             mostraGastos.Show();  
         }

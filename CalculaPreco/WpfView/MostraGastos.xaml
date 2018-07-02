@@ -17,8 +17,8 @@
             <RowDefinition Height="5*"  />
             <RowDefinition Height="1*"  />
         </Grid.RowDefinitions>
-        <DataGrid x:Name="dgGastos" HorizontalAlignment="Left" Height="260" Margin="96,248,0,0" VerticalAlignment="Top" Width="542" Grid.Row="1" Grid.ColumnSpan="2" />
-        <DataGrid x:Name="dgCompra" HorizontalAlignment="Left" Height="247" Margin="96,78,0,0" VerticalAlignment="Top" Width="778" Grid.ColumnSpan="3" Grid.RowSpan="2" AutoGenerateColumns="False">
+        <DataGrid x:Name="dgGastos" HorizontalAlignment="Left" Height="260" Margin="96,248,0,0" VerticalAlignment="Top" Width="542" Grid.Row="1" Grid.ColumnSpan="2" CanUserAddRows="False" />
+        <DataGrid x:Name="dgCompra" HorizontalAlignment="Left" Height="247" Margin="96,78,0,0" VerticalAlignment="Top" Width="778" Grid.ColumnSpan="3" Grid.RowSpan="2" AutoGenerateColumns="False" CanUserAddRows="False" >
             
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id"   Binding="{Binding Path=ProdutoID}" />
@@ -44,6 +44,6 @@
 
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="btnCalcular" Content="Calcular Preço" Grid.Column="1" HorizontalAlignment="Left" Margin="533,320,0,0" Grid.Row="1" VerticalAlignment="Top" Width="165" Click="btnCalcular_Click" Height="80" />   </Grid>
+    </Grid>
     
 </Window>
